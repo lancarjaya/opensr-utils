@@ -207,7 +207,7 @@ class PredictionDataModule(LightningDataModule):
         Dataset instance created during `setup()`.
     """
     def __init__(self, input_type,root,windows,lr_file_dict,
-                 prefetch_factor=2, batch_size=16, num_workers=4):
+                 prefetch_factor=2, batch_size=8, num_workers=4):
         super().__init__()
         self.input_type = input_type
         self.root = root
