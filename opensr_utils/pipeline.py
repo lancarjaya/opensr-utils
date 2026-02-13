@@ -230,7 +230,7 @@ class large_file_processing():
                               root=self.root,
                               windows = self.image_meta["image_windows"],
                               lr_file_dict=self.image_meta["lr_file_dict"],
-                              prefetch_factor=2, batch_size=16, num_workers=4)
+                              prefetch_factor=2, batch_size=8, num_workers=4)
         dm.setup()
         self._log(f"📦 Created PredictionDataModule with {len(dm.dataset)} patches.")
         self.datamodule = dm
